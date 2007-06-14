@@ -6,7 +6,7 @@
 Summary:	Newt provides window library functions for PHP
 Name:		php-%{modname}
 Version:	1.1
-Release:	%mkrel 13
+Release:	%mkrel 14
 Group:		Development/PHP
 License:	PHP License
 URL:		http://php-newt.sourceforge.net/
@@ -14,8 +14,6 @@ Source0:	http://pecl.php.net/get/newt-%{version}.tar.bz2
 Patch0:		newt-0.3-lib64.diff
 BuildRequires:	newt-devel
 BuildRequires:	php-devel >= 3:5.2.0
-Provides:	php5-newt
-Obsoletes:	php5-newt
 Epoch:		1
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -33,6 +31,15 @@ similar to the original Newt API of C programming language.
 %patch0 -p0
 
 %build
+export CFLAGS="%{optflags}"
+export CXXFLAGS="%{optflags}"
+export FFLAGS="%{optflags}"
+
+%if %mdkversion >= 200710
+export CFLAGS="$CFLAGS -fstack-protector"
+export CXXFLAGS="$CXXFLAGS -fstack-protector"
+export FFLAGS="$FFLAGS -fstack-protector"
+%endif
 
 phpize
 %configure2_5x --with-libdir=%{_lib} \
@@ -62,5 +69,3 @@ EOF
 %doc examples CREDITS TODO
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
-
-
