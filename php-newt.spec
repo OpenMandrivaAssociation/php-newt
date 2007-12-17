@@ -15,7 +15,6 @@ Patch0:		newt-0.3-lib64.diff
 BuildRequires:	newt-devel
 BuildRequires:	php-devel >= 3:5.2.0
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 PHP-NEWT - PHP language extension for RedHat Newt library, a terminal-based
