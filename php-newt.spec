@@ -6,7 +6,7 @@
 Summary:	Newt provides window library functions for PHP
 Name:		php-%{modname}
 Version:	1.1
-Release:	%mkrel 17
+Release:	%mkrel 18
 Group:		Development/PHP
 License:	PHP License
 URL:		http://php-newt.sourceforge.net/
@@ -15,7 +15,7 @@ Patch0:		newt-0.3-lib64.diff
 BuildRequires:	newt-devel
 BuildRequires:	php-devel >= 3:5.2.0
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 PHP-NEWT - PHP language extension for RedHat Newt library, a terminal-based
