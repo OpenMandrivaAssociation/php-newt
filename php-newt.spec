@@ -6,7 +6,7 @@
 Summary:	Newt provides window library functions for PHP
 Name:		php-%{modname}
 Version:	1.1
-Release:	%mkrel 19
+Release:	%mkrel 20
 Group:		Development/PHP
 License:	PHP License
 URL:		http://php-newt.sourceforge.net/
