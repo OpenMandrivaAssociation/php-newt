@@ -1,2 +1,4 @@
+removed_sources:
+  newt-1.2.6.tgz: c7bf6486f753498b0f9559ef869972269e9f63e5
 sources:
-  "newt-1.2.6.tgz": c7bf6486f753498b0f9559ef869972269e9f63e5
+  newt-1.2.8.tgz: 996207de333ee5508e08043f2ee9f2f4a8692738

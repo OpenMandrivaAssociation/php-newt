@@ -5,8 +5,8 @@
 
 Summary:	Newt provides window library functions for PHP
 Name:		php-%{modname}
-Version:	1.2.6
-Release:	%mkrel 2
+Version:	1.2.8
+Release:	1
 Group:		Development/PHP
 License:	PHP License
 URL:		http://php-newt.sourceforge.net/
@@ -15,7 +15,6 @@ Patch0:		newt-0.3-lib64.diff
 BuildRequires:	newt-devel
 BuildRequires:	php-devel >= 3:5.2.0
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 PHP-NEWT - PHP language extension for RedHat Newt library, a terminal-based
@@ -69,7 +68,6 @@ fi
 [ "../package.xml" != "/" ] && rm -f ../package.xml
 
 %files 
-%defattr(-,root,root)
 %doc examples CREDITS TODO
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
@@ -282,4 +280,5 @@ fi
 * Sat Jan 08 2005 Oden Eriksson <oeriksson@mandrakesoft.com> 4.3.10_0.3-1mdk
 - initial mandrake package
 - added P0
+
 
