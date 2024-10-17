@@ -9,7 +9,7 @@ Version:	1.2.8
 Release:	2
 Group:		Development/PHP
 License:	PHP License
-URL:		http://php-newt.sourceforge.net/
+URL:		https://php-newt.sourceforge.net/
 Source0:	http://pecl.php.net/get/newt-%{version}.tgz
 BuildRequires:	newt-devel
 BuildRequires:	php-devel >= 3:5.2.0
