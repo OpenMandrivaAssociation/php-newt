@@ -11,6 +11,11 @@ Group:		Development/PHP
 License:	PHP License
 URL:		https://php-newt.sourceforge.net/
 Source0:	http://pecl.php.net/get/newt-%{version}.tgz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	newt-devel
 BuildRequires:	php-devel >= 3:5.2.0
 Epoch:		1
